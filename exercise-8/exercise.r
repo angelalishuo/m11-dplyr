@@ -39,9 +39,7 @@ most.prizes.from.2004.to.2014 <- filter(pulitzer.differnce, max(Pulitzer.Prize.W
 # Which publication with at least 5 Pulitzers won from 2004-2014 had the biggest decrease(negative) in Daily circulation numbers? 
 # This publication should have Pulitzer prizes won a minimum of 5 Pulitzers, as well as the biggest decrease in circulation
 
-biggest.decrease <- filter(pulitzer.differnce, Pulitzer.Prize.Winners.and.Finalists..2004.2014 >= 5) %>% 
-  filter(min(Change.in.Daily.Circulation..2004.2013 ) == Change.in.Daily.Circulation..2004.2013) %>% 
-  select(Newspaper)
+biggest.decrease <- filter(pulitzer.differnce, Pulitzer.Prize.Winners.and.Finalists..2004.2014 >= 5) %>% filter(min(Change.in.Daily.Circulation..2004.2013 ) == Change.in.Daily.Circulation..2004.2013) %>% select(Newspaper)
 
 # Your turn! An important part about being a data scientist is asking questions. 
 # Create a question and use dplyr to figure out the answer.  
